@@ -26,7 +26,7 @@ Do not go gentle into that good night.
 
 ## 关于本站
 
-Learning Tecnology~Sharing Ideas~Change Life
+Learning Tecnology~Sharing Ideas~Changing Life
 
 **若您想使用这个 jekyll 博客主题，请访问：[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
