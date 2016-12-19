@@ -12,7 +12,9 @@ type: page
 ## 关于我
 
 天苍苍，野茫茫，风吹草低见牛羊。
+
 代码改变生活，态度决定一切。奔三的路上，野蛮生长。
+
 Do not go gentle into that good night.
 
 ## 联系我
