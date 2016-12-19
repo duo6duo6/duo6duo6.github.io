@@ -1,9 +1,8 @@
 # Welcome to duo6duo6's personal blog!
----
 
 ## Introduction
 
-Learning tecnology~Sharing ideas~Change life
+Learning Tecnology~Sharing Ideas~Change Life
 
 You can see the Blog by clicking [here](https://duo6duo6.github.io)
 
