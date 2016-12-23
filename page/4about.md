@@ -11,9 +11,9 @@ type: page
 
 ## 关于我
 
-天苍苍，野茫茫，风吹草低见牛羊。
+岁月静好，感恩。
 
-代码改变生活，态度决定一切。奔三的路上，野蛮生长。
+代码改变生活，态度决定一切。
 
 Do not go gentle into that good night.
 
@@ -26,7 +26,7 @@ Do not go gentle into that good night.
 
 ## 关于本站
 
-Learning Tecnology~Sharing Ideas~Changing Life
+Learning Technology~Sharing Ideas~Changing Life
 
 **若您想使用这个 jekyll 博客主题，请访问：[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Learning Tecnology~Sharing Ideas~Changing Life
+Learning Technology~Sharing Ideas~Changing Life
 
 You can see the Blog by clicking [here](https://duo6duo6.github.io)
 
