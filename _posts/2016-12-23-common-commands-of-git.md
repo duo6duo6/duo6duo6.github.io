@@ -6,10 +6,6 @@ categories: Git
 tags:  命令
 ---
 
-* content
-{:toc}
-
-
 ## 术语
 
 - 初始化Git仓库：把目录变成Git可管理的仓库
@@ -138,7 +134,8 @@ $ git push [remote]:refs/tags/v1.0                       # 删除远程标签
 ### 其它
 
 - 忽略文件
-  在Git工作区的根目录创建一个.gitignore文件，可以把要忽略的文件名填进去并提交到Git，Git就会自动忽略这些文件，示例如下
+  在Git工作区的根目录创建一个.gitignore文件，可以把要忽略的文件名填进去并提交到Git，Git就会自动忽略这些文件，示例如下：
+  
 ```
 # Windows:
 Thumbs.db
