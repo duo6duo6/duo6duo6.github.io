@@ -1,10 +1,18 @@
 ---
 layout: post
 title:  "Git 常用命令"
-date:   2016-12-23 18:30:26
 categories: Git
 tags:  命令
 ---
+
+* content
+{:toc}
+
+Git 是目前世界上最先进的分布式版本控制系统，在学习 Git 的过程中，参照了[廖雪峰](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)的 Git 教程和其它网上资料,整理了常用的 Git 命令。
+
+
+
+
 
 ## 术语
 
@@ -154,5 +162,3 @@ build
 db.ini
 deploy_key_rsa
 ```
-
-
