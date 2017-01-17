@@ -16,19 +16,19 @@ Git 是目前世界上最先进的分布式版本控制系统，在学习 Git �
 
 ## 术语
 
-- 初始化Git仓库：把目录变成Git可管理的仓库
+- 初始化 Git 仓库：把目录变成 Git 可管理的仓库
 - 工作区：电脑里能看到的目录，不包括隐藏目录 .git
 - 版本库：既隐藏目录 .git，当前仓库下，如果没有任何的提交，那么版本库就是对应上次提交后的内容
 - 暂存区：在版本库中标记为 "index" 或 "stage"，是一个介于工作区和版本库的中间状态
-- 分支：每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支
+- 分支：每次提交，Git 都把它们串成一条时间线，这条时间线就是一个分支
 - HEAD：实际是指向当前分支的一个“游标”
 
-## Git命令
+## Git 常用命令
 
-### 配置Git仓库
+### 配置 Git 仓库
 
 ```
-$ git init                                             # 在当前目录初始化Git仓库
+$ git init                                             # 在当前目录初始化 Git 仓库
 $ git config --global user.name "Your Name"            # 配置用户名
 $ git config --global user.email "email@example.com"   # 配置用户邮箱
 ```
@@ -36,15 +36,15 @@ $ git config --global user.email "email@example.com"   # 配置用户邮箱
 ### 文件添加和提交到版本库
 ```
 $ git add [file]           # 把工作区的文件修改添加到暂存区
-$ git add -A               # 表示把当前目录中所有tracked文件中被修改过或已删除文件和所有untracted的文件信息添加到索引库。
-$ git add -u               # 把当前目录中所有tracked文件中被修改过或已删除文件的信息添加到索引库。它不会处理untracted的文件。
+$ git add -A               # 表示把当前目录中所有 tracked 文件中被修改过或已删除文件和所有 untracted 的文件信息添加到索引库
+$ git add -u               # 把当前目录中所有 tracked 文件中被修改过或已删除文件的信息添加到索引库。它不会处理 untracted 的文件
 $ git commit -m "..."      # 把暂存区的修改提交到版本库
 $ git status               # 查看仓库状态
 $ git log --pretty=oneline # 查看提交日志
 $ git reflog               # 查看命令记录
 ```
 
-### 查看各个区的差异
+### 查看差异
 ```
 $ git diff                        # 查看工作区和暂存区的差异
 $ git diff -- [file]              # 查看文件在工作区和暂存区的差异
@@ -56,8 +56,8 @@ $ git diff HEAD -- [file]         # 查看文件在工作区和版本库的差�
 
 ### 撤销修改
 ```
-$ git checkout -- [file]          # 撤销工作区的修改，让文件回到最近一次git add时的状态
-$ git reset HEAD [file]           # 撤销暂存区的修改，让文件回到最近一次git commit时的状态
+$ git checkout -- [file]          # 撤销工作区的修改，让文件回到最近一次 git add 时的状态
+$ git reset HEAD [file]           # 撤销暂存区的修改，让文件回到最近一次 git commit 时的状态
 ```
 
 ### 删除文件
@@ -75,14 +75,16 @@ $ git reset --hard 6523476        # 回退到指定版本，6523476是对应的 
 
 ### 远程仓库
 
-1. 创建SSH Key
+**准备：**关联本地 Git 仓库和 远程 Github 仓库
+
+1. 创建 SSH Key
 ```
 $ ssh-keygen -t rsa -C "youremail@example.com"
-#如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+#如果一切顺利的话，可以在用户主目录里找到 .ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
 ```
 
-2. 登陆GitHub，打开“Account settings”，“SSH Keys”页面
-点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，点“Add Key”，你就应该看到已经添加的Key
+2. 登陆 GitHub，打开 “Account settings”，“SSH Keys” 页面
+点 “Add SSH Key”，填上任意 Title，在 Key 文本框里粘贴 id_rsa.pub 文件的内容，点 “Add Key”，你就应该看到已经添加的 Key
 
 ```
 # 添加远程仓库并命名
@@ -109,17 +111,17 @@ $ git push [remote] --force
 ```
 $ git branch [shortname]                             # 创建分支
 $ git checkout [branch]                              # 切换分支
-$ git checkout -b [branch]                           # 创建并切换到该分支s
+$ git checkout -b [branch]                           # 创建并切换到该分支
 $ git branch --set-upstream [branch]                 # 建立本地分支与远程分支的关联
 $ git pull                                           # 抓取远程到本地
-$ git merge [branch]                                 # 合并指定分支到当前分支,Fast forward模式合并，没有commit，删除分支后，会丢掉分支信息
+$ git merge [branch]                                 # 合并指定分支到当前分支,Fast forward 模式合并，没有 commit，删除分支后，会丢掉分支信息
 $ git merge --no-ff -m "merge with no-ff" [branch]   # 普通模式合并，合并后的历史有分支，能看出来曾经做过合并
 $ git log --graph --pretty=oneline --abbrev-commit   # 查看合并图
 $ git stash                                          # 储藏工作现场
 $ git stash list                                     # 查看工作现场
-$ git stash pop                                      # 恢复工作现场同时删除stash
-$ git stash apply stash@{0}                          # 恢复工作现场,但不删除stash
-$ git stash drop stash@{0}                           # 删除stash
+$ git stash pop                                      # 恢复工作现场同时删除 stash
+$ git stash apply stash@{0}                          # 恢复工作现场,但不删除 stash
+$ git stash drop stash@{0}                           # 删除 stash
 $ git branch                                         # 列出所有本地分支
 $ git branch -r                                      # 列出所有远程分支
 $ git branch -d [branch]                             # 删除分支
@@ -142,7 +144,7 @@ $ git push [remote]:refs/tags/v1.0                       # 删除远程标签
 ### 其它
 
 - 忽略文件
-  在Git工作区的根目录创建一个.gitignore文件，可以把要忽略的文件名填进去并提交到Git，Git就会自动忽略这些文件，示例如下：
+  在 Git 工作区的根目录创建一个.gitignore 文件，可以把要忽略的文件名填进去并提交到 Git，Git 就会自动忽略这些文件，示例如下：
   
 ```
 # Windows:
