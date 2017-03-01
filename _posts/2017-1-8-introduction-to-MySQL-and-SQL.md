@@ -63,7 +63,7 @@ mysql>SELECT NOW(),VERSION,\c             # \c 取消已输入的命令
 ### 创建数据库
 ```
 mysql>CREATE DATABASE sampdb;         # 创建 sampdb 数据库
-mysql>SELECT DATABASE;                # 查看当前默认数据库
+mysql>SELECT DATABASE();              # 查看当前默认数据库
 mysql>SHOW DATABASES;                 # 列出当前连接的服务器上的数据库
 mysql>USE sampdb;                     # 设置当前默认数据库
 ```
