@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "yii2 cookbook 序言"
-categories: php yii2 cookbook 翻译
-tags:  序言 
+title:  "译 yii2 cookbook 序言"
+categories: php yii2 cookbook 译文
+tags:  序言
 ---
 
 * content
